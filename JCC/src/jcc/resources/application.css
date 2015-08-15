@@ -1,0 +1,12 @@
+.btn-default {
+	-fx-background-color: #8F8F8F;
+	-fx-background-radius: 6px;
+}
+
+.btn-default:hover {
+	-fx-background-color: #FF9933;
+}
+
+.btn-default:focused {
+	-fx-background-color: #484848;
+}
