@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import jcc.JCC;
+import jcc.app_services.AppServices;
 
 /**
  *
@@ -22,7 +23,8 @@ public class LoginLoadController {
     }
     
     @FXML
-    private void cancelSignIn(ActionEvent event) {
-        JCC.getStage().close();
+    private void cancelSignIn(ActionEvent event) throws IOException {
+        AppServices.resetFile();
+        new LoginController().openWindow();
     }
 }

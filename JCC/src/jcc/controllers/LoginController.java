@@ -1,6 +1,8 @@
 package jcc.controllers;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,15 +39,22 @@ public class LoginController {
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("/jcc/resources/application.css").toExternalForm());
         JCC.getStage().setScene(scene);
+        JCC.getStage().setWidth(400);
+        JCC.getStage().setHeight(500);
         JCC.getStage().show();
     }
 
     @FXML
-    private void signIn(ActionEvent event) throws IOException {
+    private void signIn(ActionEvent event) throws IOException, FileNotFoundException {
         if (!AppServices.verifyLogin(login_userName.getText(), login_password.getText())) {
             login_label.setText("Incorrect username or password.");
         } else {
             login_label.setText("");
+            if (login_checkBox.selectedProperty().getValue()) {
+                AppServices.writeCredentials(login_userName.getText(), login_password.getText());
+            } else {
+                AppServices.resetFile();
+            }
             new LoginLoadController().openWindow();
         }
     }

@@ -5,13 +5,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #E6E6E6;" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jcc.controllers.LoginController">
+<BorderPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #E6E6E6;" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jcc.controllers.LoginController">
    <center>
-      <VBox alignment="CENTER" maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" prefHeight="300.0" prefWidth="400.0">
+            <HBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0">
                <children>
-                  <AnchorPane maxHeight="300.0" maxWidth="200.0" minHeight="300.0" minWidth="200.0" prefHeight="300.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="300.0" prefWidth="200.0">
                      <children>
                         <TextField fx:id="login_userName" layoutY="42.0" promptText="Username" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <font>
@@ -23,17 +23,17 @@
                               <Font size="16.0" />
                            </font>
                         </PasswordField>
-                        <CheckBox fx:id="login_checkBox" layoutY="136.0" mnemonicParsing="false" text="Stay signed in">
+                        <CheckBox fx:id="login_checkBox" layoutY="136.0" mnemonicParsing="false" text="Stay signed in" AnchorPane.leftAnchor="0.0">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </CheckBox>
-                        <Button fx:id="login_signIn" layoutY="171.0" minWidth="95.0" mnemonicParsing="false" onAction="#signIn" styleClass="btn-default" text="Sign in" textFill="WHITE">
+                        <Button fx:id="login_signIn" layoutY="171.0" minWidth="95.0" mnemonicParsing="false" onAction="#signIn" styleClass="btn-default" text="Sign in" textFill="WHITE" AnchorPane.leftAnchor="0.0">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Button>
-                        <Button fx:id="login_register" layoutX="105.0" layoutY="171.0" minWidth="95.0" mnemonicParsing="false" styleClass="btn-default" text="Register" textFill="WHITE">
+                        <Button fx:id="login_register" layoutX="105.0" layoutY="171.0" minWidth="95.0" mnemonicParsing="false" styleClass="btn-default" text="Register" textFill="WHITE" AnchorPane.rightAnchor="0.0">
                            <font>
                               <Font size="16.0" />
                            </font>
